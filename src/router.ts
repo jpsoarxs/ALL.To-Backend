@@ -1,13 +1,13 @@
-import { Router } from 'express';
+import { Router } from 'express'
 
-import HelloWordRouter from '@src/app/modules/Hello/index';
+import HelloWordRouter from '@src/app/modules/Hello/index'
 
 class Routes {
     static define(router: Router): Router {
-        router.use('/hello-word', HelloWordRouter);
+        router.use('/hello-word', HelloWordRouter)
 
-        return router;
+        return router
     }
 }
 
-export default Routes.define(Router());
+export default Routes.define(Router())
