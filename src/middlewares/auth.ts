@@ -17,19 +17,21 @@ export const auth = (req: Request, res: Response, next: NextFunction) => {
         }
 
         try {
-            req.user = jwt.verify(token, 'screte')
+            req.user = jwt.verify(token, process.env.JWT_SECRET)
         } catch (err) {
-            return res.status(401).json({
-                error: {
-                    msg: 'Failed to authenticate token!'
+            if (err instanceof Error) {
+                if (err.name === 'TokenExpiredError') {
+                    return res.status(401).json({ error: 'Token expired' })
                 }
-            })
+
+                return res.status(401).json({
+                    error: 'Failed to authenticate token!'
+                })
+            }
         }
     } else {
         return res.status(401).json({
-            error: {
-                msg: 'No token provided!'
-            }
+            error: 'No token provided!'
         })
     }
 
