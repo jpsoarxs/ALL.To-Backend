@@ -53,5 +53,8 @@
       "@modules": "src/app/modules",
       "@services": "src/app/services",
       "@src": "src"
+   },
+   "engines": {
+      "node": "16.15.x"
    }
 }

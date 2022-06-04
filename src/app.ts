@@ -13,7 +13,7 @@ import { auth } from './middlewares/auth'
 export class SetupApplication {
     private server?: Server
 
-    constructor(private port = 3000, public app = express()) { }
+    constructor(private port: any = 3000, public app = express()) { }
 
     public init(): void {
         this.setupDatabase()
