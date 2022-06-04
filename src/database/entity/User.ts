@@ -1,28 +1,29 @@
 import { Entity, ObjectID, ObjectIdColumn, Column, CreateDateColumn, UpdateDateColumn } from "typeorm"
 
+import { UserDto } from '@dto/index'
 @Entity()
-export class User {
+export class User implements UserDto {
     @ObjectIdColumn()
-    id: ObjectID
+    public id: ObjectID
 
     @Column({ type: "string" })
-    name: string
+    public name: string
 
     @Column({ type: "string" })
-    lastname: string
+    public lastname: string
 
     @Column({ type: "string", unique: true })
-    email: string
+    public email: string
 
     @Column({ type: "string", select: false })
-    password: string
+    public password: string
 
     @Column({ type: "string" })
-    birth_date: string
+    public birth_date: string
 
     @CreateDateColumn({ type: "timestamp", default: () => "CURRENT_TIMESTAMP(6)" })
-    created_at: Date
+    public created_at: Date
 
     @UpdateDateColumn({ type: "timestamp", default: () => "CURRENT_TIMESTAMP(6)", onUpdate: "CURRENT_TIMESTAMP(6)" })
-    updated_at: Date
+    public updated_at: Date
 }

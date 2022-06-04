@@ -33,11 +33,16 @@
       ],
       "@services/*": [
         "./src/app/services/*"
+      ],
+      "@dto/*": [
+        "./src/app/dto/*"
+      ],
+      "@util/*": [
+        "./src/util/*"
       ]
     },
     "rootDirs": [
-      "./src",
-      "./test"
+      "./src"
     ],
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true,

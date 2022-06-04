@@ -15,7 +15,7 @@
         "semi": [
             2,
             "never"
-        ],
+        ]
     },
     "settings": {
         "import/resolver": {
@@ -23,7 +23,17 @@
                 ["@modules", "./src/app/modules"],
                 ["@src", "./src"],
                 ["@services", "./src/app/services"],
-            ]
+                ["@dto", "./src/app/dto"],
+                ["@util", "./src/util"],
+            ],
+            "node": {
+                "extensions": [".ts"],
+                "moduleDirectory": ["src/"],
+            },
+            "typescript": {
+                "alwaysTryTypes": true,
+                "project": "./src/**/*.ts",
+            }
         }
     }
 }
