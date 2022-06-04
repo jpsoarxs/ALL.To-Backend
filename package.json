@@ -1,0 +1,19 @@
+{
+  "name": "ff-hacka",
+  "version": "1.0.0",
+  "description": "api ff-hack",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jpsoarxs/ff-hacka.git"
+  },
+  "author": "Joao Pedro",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jpsoarxs/ff-hacka/issues"
+  },
+  "homepage": "https://github.com/jpsoarxs/ff-hacka#readme"
+}
