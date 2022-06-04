@@ -1,6 +1,6 @@
 import { Router } from 'express';
 
-import HelloWordRouter from '@modules/Products/index';
+import HelloWordRouter from '@src/app/modules/Hello/index';
 
 class Routes {
     static define(router: Router): Router {
