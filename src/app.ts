@@ -8,6 +8,8 @@ import router from './router'
 import "reflect-metadata"
 import { createConnections } from "typeorm"
 
+import { auth } from './middlewares/auth'
+
 export class SetupApplication {
     private server?: Server
 
@@ -28,7 +30,8 @@ export class SetupApplication {
     }
 
     private setupRoutes(): void {
-        this.app.use(router)
+        this.app.use('/api', auth)
+        this.app.use('/api', router)
     }
 
     private setupExpress(): void {

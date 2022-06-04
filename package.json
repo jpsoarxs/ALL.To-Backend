@@ -5,8 +5,8 @@
    "main": "index.js",
    "scripts": {
       "build": "tsc",
-      "start": "ts-node src/index.ts",
-      "dev": "ts-node-dev 'src/server.ts'",
+      "start": "ts-node --files src/index.ts",
+      "dev": "ts-node-dev --files 'src/server.ts'",
       "lint": "eslint --ext .js,.jsx,.ts,.tsx src/ --fix",
       "typeorm": "typeorm-ts-node-commonjs"
    },
@@ -22,11 +22,13 @@
    "homepage": "https://github.com/jpsoarxs/ff-hacka#readme",
    "devDependencies": {
       "@types/express": "^4.17.13",
+      "@types/jsonwebtoken": "^8.5.8",
       "@types/module-alias": "^2.0.1",
       "@types/node": "^16.11.10",
       "@typescript-eslint/eslint-plugin": "^5.27.0",
       "@typescript-eslint/parser": "^5.27.0",
       "eslint": "^8.17.0",
+      "eslint-import-resolver-alias": "^1.1.2",
       "nodemon": "^2.0.16",
       "ts-node": "10.7.0",
       "ts-node-dev": "^2.0.0",
@@ -37,9 +39,15 @@
       "cors": "^2.8.5",
       "dotenv": "^16.0.1",
       "express": "^4.18.1",
+      "jsonwebtoken": "^8.5.1",
       "module-alias": "^2.2.2",
       "mongodb": "^3.0.8",
-      "typeorm": "0.3.6",
-      "reflect-metadata": "^0.1.13"
+      "reflect-metadata": "^0.1.13",
+      "typeorm": "0.3.6"
+   },
+   "_moduleAliases": {
+      "@modules": "src/app/modules",
+      "@services": "src/app/services",
+      "@src": "src"
    }
 }

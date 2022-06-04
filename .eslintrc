@@ -11,14 +11,19 @@
     ],
     "rules": {
         "no-console": 1,
-        "@typescript-eslint/no-unused-vars": "error", 
-        "@typescript-eslint/consistent-type-definitions": [
-            "error",
-            "type"
-        ],
+        "@typescript-eslint/no-unused-vars": "error",
         "semi": [
             2,
             "never"
-        ]
+        ],
+    },
+    "settings": {
+        "import/resolver": {
+            "alias": [
+                ["@modules", "./src/app/modules"],
+                ["@src", "./src"],
+                ["@services", "./src/app/services"],
+            ]
+        }
     }
 }

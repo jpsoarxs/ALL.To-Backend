@@ -27,8 +27,8 @@
       "@modules/*": [
         "./src/app/modules/*"
       ],
-      "@test/*": [
-        "./test/*"
+      "@services/*": [
+        "./src/app/services/*"
       ]
     },
     "rootDirs": [
@@ -36,7 +36,11 @@
       "./test"
     ],
     "experimentalDecorators": true,
-    "emitDecoratorMetadata": true
+    "emitDecoratorMetadata": true,
+    "typeRoots": [
+      "./node_modules/@types",
+      "./src/types"
+    ]
   },
   "include": [
     "./src/**/*.ts",
