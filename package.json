@@ -47,6 +47,7 @@
       "module-alias": "^2.2.2",
       "mongodb": "^3.0.8",
       "reflect-metadata": "^0.1.13",
+      "tslog": "^3.3.3",
       "typeorm": "0.3.6"
    },
    "_moduleAliases": {

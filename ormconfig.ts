@@ -1,3 +1,5 @@
+import { MyCustomLogger } from './src/util/database-logger'
+
 /* eslint-disable no-undef */
 // eslint-disable-next-line no-undef
 module.exports = {
@@ -6,16 +8,14 @@ module.exports = {
    port: process.env.DB_PORT,
    database: process.env.DB_DATABASE,
    synchronize: true,
-   logging: false,
+   logging: new MyCustomLogger(),
    useUnifiedTopology: true,
-   entities: [
-      "src/entity/**/*.ts"
-   ],
-   migrations: ["src/database/migration/**/*.ts"
-   ],
-   subscribers: ["src/database/subscriber/**/*.ts"
-   ],
+   entities: ["./src/database/entity/**/*.ts"],
+   migrations: ["./src/database/migration/**/*.ts"],
+   subscribers: ["./src/database/subscriber/**/*.ts"],
    cli: {
-      "entitiesDir": "src/database/entity", "migrationsDir": "src/database/migration", "subscribersDir": "src/database/subscriber"
+      entitiesDir: "./src/database/entity",
+      migrationsDir: "./src/database/migration",
+      subscribersDir: "./src/database/subscriber"
    }
 }
