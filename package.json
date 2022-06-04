@@ -1,41 +1,45 @@
 {
-  "name": "ff-hacka",
-  "version": "1.0.0",
-  "description": "api ff-hack",
-  "main": "index.js",
-  "scripts": {
-    "build": "tsc",
-    "start": "npm run build && node dist/server.js",
-    "dev": "ts-node-dev 'src/server.ts'",
-    "lint": "eslint --ext .js,.jsx,.ts,.tsx src/ --fix"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/jpsoarxs/ff-hacka.git"
-  },
-  "author": "Joao Pedro",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/jpsoarxs/ff-hacka/issues"
-  },
-  "homepage": "https://github.com/jpsoarxs/ff-hacka#readme",
-  "devDependencies": {
-    "@types/express": "^4.17.13",
-    "@types/module-alias": "^2.0.1",
-    "@types/node": "^17.0.39",
-    "@typescript-eslint/eslint-plugin": "^5.27.0",
-    "@typescript-eslint/parser": "^5.27.0",
-    "eslint": "^8.17.0",
-    "nodemon": "^2.0.16",
-    "ts-node": "^10.8.1",
-    "ts-node-dev": "^2.0.0",
-    "typescript": "^4.7.3"
-  },
-  "dependencies": {
-    "body-parser": "^1.20.0",
-    "cors": "^2.8.5",
-    "dotenv": "^16.0.1",
-    "express": "^4.18.1",
-    "module-alias": "^2.2.2"
-  }
+   "name": "ff-hacka",
+   "version": "1.0.0",
+   "description": "api ff-hack",
+   "main": "index.js",
+   "scripts": {
+      "build": "tsc",
+      "start": "ts-node src/index.ts",
+      "dev": "ts-node-dev 'src/server.ts'",
+      "lint": "eslint --ext .js,.jsx,.ts,.tsx src/ --fix",
+      "typeorm": "typeorm-ts-node-commonjs"
+   },
+   "repository": {
+      "type": "git",
+      "url": "git+https://github.com/jpsoarxs/ff-hacka.git"
+   },
+   "author": "Joao Pedro",
+   "license": "ISC",
+   "bugs": {
+      "url": "https://github.com/jpsoarxs/ff-hacka/issues"
+   },
+   "homepage": "https://github.com/jpsoarxs/ff-hacka#readme",
+   "devDependencies": {
+      "@types/express": "^4.17.13",
+      "@types/module-alias": "^2.0.1",
+      "@types/node": "^16.11.10",
+      "@typescript-eslint/eslint-plugin": "^5.27.0",
+      "@typescript-eslint/parser": "^5.27.0",
+      "eslint": "^8.17.0",
+      "nodemon": "^2.0.16",
+      "ts-node": "10.7.0",
+      "ts-node-dev": "^2.0.0",
+      "typescript": "4.5.2"
+   },
+   "dependencies": {
+      "body-parser": "^1.20.0",
+      "cors": "^2.8.5",
+      "dotenv": "^16.0.1",
+      "express": "^4.18.1",
+      "module-alias": "^2.2.2",
+      "mongodb": "^3.0.8",
+      "typeorm": "0.3.6",
+      "reflect-metadata": "^0.1.13"
+   }
 }
