@@ -21,6 +21,9 @@
     "allowSyntheticDefaultImports": true,
     "baseUrl": ".",
     "paths": {
+      "*": [
+        "./*"
+      ],
       "@src/*": [
         "./src/*"
       ],
@@ -43,8 +46,7 @@
     ]
   },
   "include": [
-    "./src/**/*.ts",
-    "./test/**/*.ts"
+    "./src/**/*.ts"
   ],
   "exclude": [
     "./node_modules/*",
