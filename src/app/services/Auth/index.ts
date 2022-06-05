@@ -9,7 +9,7 @@ interface TokenResponse {
 }
 export class AuthService {
     public login(user: UserDto): TokenResponse {
-        const expiresIn = '1m'
+        const expiresIn = '1h'
 
         const payload = {
             id: user.id,
