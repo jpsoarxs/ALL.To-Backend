@@ -7,4 +7,4 @@ web: ls
 web: rm -v !("dist")
 web: ls
 
-web: node dist/server.js
+web: node dist/src/server.js

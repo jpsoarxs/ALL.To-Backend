@@ -4,7 +4,7 @@
    "description": "api ff-hack",
    "main": "server.js",
    "scripts": {
-      "build": "tsc --project tsconfig.json && tsc-alias -p tsconfig.json",
+      "build": "rimraf ./dist && tsc --project tsconfig.json && tsc-alias -p tsconfig.json",
       "start": "ts-node --files src/server.ts",
       "dev": "ts-node-dev --files 'src/server.ts'",
       "lint": "eslint --ext .js,.jsx,.ts,.tsx src/ --fix",
